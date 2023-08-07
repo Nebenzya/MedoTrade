@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <p class="lead">Выберите действие:</p>
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h3 id="gettingStartedTitle">Добавить читателя</h3>
+            <p>
+                Зарегистрироваться как читатель
+            </p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("NewUser","Users")">Регистрация &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="getBookTitle">
+            <h3 id="getBookTitle">Взять книгу для чтения</h3>
+            <p>Выберите книгу из общего списка</p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("AllBooks","Books")">Выбрать книгу &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="returnBookTitle">
+            <h3 id="returnBookTitle">Возврат книги</h3>
+            <p>Укажите номер книги для возврата</p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("ReturnBook","Books")">Вернуть книгу &raquo;</a></p>
+        </section>
+    </div>
+</main>

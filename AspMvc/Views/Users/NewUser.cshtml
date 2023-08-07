@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div align="center">
+    <b>Регистрация нового читателя</b>
+    @using (Ajax.BeginForm("AddUser", "Users", new AjaxOptions { HttpMethod = "Post" }))
+    {
+        <b>Имя</b>
+        <input type="text" name="name" />
+        <b>Телефон</b>
+        <input type="text" name="phone" />
+        <br/>
+        <input type="submit" name="add"/>
+    }
+    @Html.ActionLink("Назад", "Index", "Home")
+
+</div>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AspMvc.Models.Book>
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div align="center">
+    <h2>Список книг</h2>
+    <table cellpadding="5" border="1">
+        <tr style="background-color:black; color:white;">
+            <td>Номер</td>
+            <td>Название</td>
+            <td>Описание</td>
+        </tr>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id </td>
+                <td>@book.Title</td>
+                <td>@book.Description </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<div align="center">
+    @using (Ajax.BeginForm("AddBook", "Books", new AjaxOptions { HttpMethod = "Post" }))
+    {
+        <b>Добавить новую книгу</b>
+        <br />
+        <input type="text" name="title" />
+        <input type="text" name="description" />
+        <input type="submit" name="addBook" />
+    }
+</div>

@@ -1,0 +1,15 @@
+﻿@model AspMvc.Models.Book
+
+<div>
+    <h4>Новая книга добавлена:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
